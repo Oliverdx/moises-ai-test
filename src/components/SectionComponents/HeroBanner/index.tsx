@@ -8,8 +8,6 @@ import Button from "@/components/Button";
 
 export default function HeroBanner(sectionData: sectionHeroVideo) {
 
-  console.log('Section Data: ', sectionData);
-
   const { __component, background, title, description, buttons } = sectionData;
 
   return <section
