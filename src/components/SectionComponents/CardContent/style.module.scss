@@ -1,0 +1,28 @@
+.cardContentWrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 571px;
+
+
+  h2{
+    text-align: center;
+    margin: 20px 0 15px;
+  }
+}
+
+.preTitle{
+  font-size: 14px;
+  line-height: 16.8px;
+  text-align: center;
+  color: #75A5FF;
+}
+
+.cardsWrapper{
+  display: grid;
+  grid-template-columns: repeat(3, 381px);
+  grid-gap: 50px;
+  margin: 40px 0 0;
+}
