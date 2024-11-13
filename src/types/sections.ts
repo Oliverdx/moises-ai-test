@@ -1,3 +1,5 @@
+import { brands, button } from "./generic"
+
 export interface sectionBase {
   id: number,
   __component: string,
@@ -8,20 +10,6 @@ export interface sectionBase {
   description: string
 }
 
-export interface button {
-    id: number,
-    appearance: string,
-    size: string,
-    color: string,
-    url: string,
-    text: string,
-    subText: string,
-    fluid: boolean,
-    newTab: boolean,
-    startIcon: string,
-    endIcon: string
-}
-
 export interface sectionHeroVideo extends sectionBase {
   buttons: Array<button>
   demo: unknown,
@@ -29,4 +17,8 @@ export interface sectionHeroVideo extends sectionBase {
     url: string,
     height: string
   }
+}
+
+export interface sectionBrands extends sectionBase {
+  brands: Array<brands>
 }

@@ -1,0 +1,33 @@
+@mixin borderBlur {
+  content: "";
+  width: 250px;
+  height: 46px;
+  display: block;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  background: linear-gradient(90deg, rgb(0, 0, 0) 10%, rgba(255, 255, 255, 0) 80%)
+}
+
+
+.brandsWrapper{
+  display: block;
+  height: 80px;
+  overflow: hidden;
+  position: relative;
+
+  &:before{
+    @include borderBlur;
+    left: 0;
+  }
+
+  &:after {
+    @include borderBlur;
+    right: 0;
+    transform: rotate(180deg);
+  }
+
+  img{
+    margin: 0 20px;
+  }
+}

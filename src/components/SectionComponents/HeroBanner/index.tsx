@@ -1,10 +1,13 @@
-import { button, sectionHeroVideo } from "@/types/sections";
+import Button from "@/components/Button";
 
-import styles from "./style.module.scss"
+import styles from "./style.module.scss";
+
+import { sectionHeroVideo } from "@/types/sections";
+import { button } from "@/types/generic";
 
 import { PlayButton } from "@/icons/Playbutton";
 import { SoundWaves } from "@/icons/Soundwaves";
-import Button from "@/components/Button";
+
 
 export default function HeroBanner(sectionData: sectionHeroVideo) {
 
@@ -15,7 +18,6 @@ export default function HeroBanner(sectionData: sectionHeroVideo) {
     data-section-name={__component.replace(".", "_")}
     style={{
       background: `url(${background?.url}) no-repeat left / cover`,
-      height: background?.height
     }}
   >
     <h1 className={styles.herovideo_title}>{title}</h1>
