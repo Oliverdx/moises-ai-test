@@ -38,7 +38,7 @@ export default async function RootLayout({
       />
       <body>
         <Header links={globalData?.menu}/>
-        <main style={{ padding: 32 }}>{children}</main>
+        <main>{children}</main>
       </body>
     </html>
   );
