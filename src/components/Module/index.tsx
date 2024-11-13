@@ -7,8 +7,6 @@ import { ArrowUp } from "@/icons/ArrowUp";
 
 export default function Module({content} : {content: module}) {
 
-  console.log('Module', content);
-
   return <div className={styles.moduleWrapper}>
     <h3 className={styles.cardTitle}>
       {content.title}
