@@ -1,0 +1,67 @@
+@mixin modulesContainer{
+  width: 1240px;
+  margin: 0 auto;
+}
+
+.modulesSection{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 469px;
+}
+
+.modulesWrapper{
+  @include modulesContainer;
+  display: flex;
+  align-items: center;
+  margin-bottom: 38px;
+
+  h2{
+    margin: 0 0 15px;
+  }
+
+  span{
+    display: block;
+    width: 585px;
+  }
+
+  &_titleContainer{
+    width: 1134px;
+  }
+
+  &_controller{
+    display: flex;
+    justify-content: space-around;
+    width: 96px;
+
+    button{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border: none;
+      appearance: none;
+      border-radius: 100%;
+      background-color: #FFF;
+      cursor: pointer;
+
+      &[disabled]{
+        cursor: not-allowed;
+        background-color: #636363;
+      }
+    }
+  }
+
+}
+
+.modulesCards{
+  @include modulesContainer;
+  display: flex;
+  flex-direction: column-reverse;
+  // display: grid;
+  // grid-template-columns: repeat(3, 397px);
+  // justify-content: space-between;
+  // height: 170px;
+  // overflow: hidden;
+}

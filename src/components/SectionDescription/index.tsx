@@ -2,8 +2,13 @@
 
 import styles from "./style.module.scss";
 
-export default function SectionDescription({children} :{children:React.ReactNode}) {
-  return <span className={styles.section_description}>
+interface sectionDescriptionProps {
+  textColor?: string,
+  children: React.ReactNode
+}
+
+export default function SectionDescription({ textColor="#858585", children }: sectionDescriptionProps) {
+  return <span className={styles.section_description} style={{ color: textColor }}>
     {children}
   </span>
 }

@@ -1,0 +1,34 @@
+.moduleWrapper{
+  display: grid;
+  grid-gap: 24px 14px;
+  width: 397px;
+  grid-gap: 19px 0 44px;
+  background: #212121;
+  padding: 20px;
+  border-radius: 16px;
+  box-sizing: border-box;
+}
+
+.cardTitle{
+  font-size: 16px;
+  margin: 0;
+  text-align: left;
+}
+
+.moduleDescription{
+  display: block;
+  font-size: 14px;
+  color: #858585;
+  margin: 0;
+  text-align: left;
+}
+
+.moduleLink{
+  display: flex;
+  align-items: center;
+  color: #75A5FF;
+
+  svg{
+    margin-left: 10px;
+  }
+}

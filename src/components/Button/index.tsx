@@ -6,7 +6,7 @@ import styles from "./style.module.scss"
 
 
 import { ArrowRight } from "@/icons/ArrowRight";
-import { button } from "@/types/generic";
+import { button, module } from "@/types/generic";
 
 export default function Button(buttonProps: button){
   
@@ -14,9 +14,9 @@ export default function Button(buttonProps: button){
 
   const {
     text,
-    appearance,
+    appearance = "",
     url,
-    endIcon
+    endIcon = ""
   } = buttonProps;
 
   const endIconsMap: { [key: string]: React.ReactNode } = {
