@@ -15,9 +15,9 @@ export default async function Home() {
         if(!SectionComponent)
           return null;
 
-        return <SectionComponent key={section.id} {...section}/> ;
+        return <SectionComponent key={section.id} {...section}/>
 
-      })};
+      })}
     </>
   );
 }

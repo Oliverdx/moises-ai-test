@@ -4,10 +4,11 @@ import { useRouter } from "next/navigation";
 
 import styles from "./style.module.scss"
 
-import { button } from "@/types/sections";
-import { ArrowRight } from "@/icons/ArrowRight";
 
-export default function Button(buttonProps:  button){
+import { ArrowRight } from "@/icons/ArrowRight";
+import { button } from "@/types/generic";
+
+export default function Button(buttonProps: button){
   
   const router = useRouter();
 
