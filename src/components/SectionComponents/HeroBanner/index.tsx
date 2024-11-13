@@ -7,6 +7,7 @@ import { button } from "@/types/generic";
 
 import { PlayButton } from "@/icons/Playbutton";
 import { SoundWaves } from "@/icons/Soundwaves";
+import SectionDescription from "@/components/SectionDescription";
 
 
 export default function HeroBanner(sectionData: sectionHeroVideo) {
@@ -21,7 +22,7 @@ export default function HeroBanner(sectionData: sectionHeroVideo) {
     }}
   >
     <h1 className={styles.herovideo_title}>{title}</h1>
-    <span className={styles.herovideo_description}>{description}</span>
+    <SectionDescription>{description}</SectionDescription>
 
     <div className={styles.herovideo_demo}>
       <span className={styles.herovideo_demo_smallDesc}>Try Now</span>

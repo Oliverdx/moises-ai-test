@@ -1,4 +1,4 @@
-import { brands, button } from "./generic"
+import { brands, button, card } from "./generic"
 
 export interface sectionBase {
   id: number,
@@ -21,4 +21,8 @@ export interface sectionHeroVideo extends sectionBase {
 
 export interface sectionBrands extends sectionBase {
   brands: Array<brands>
+}
+
+export interface sectionCardContent extends sectionBase{
+  cards: Array<card>
 }

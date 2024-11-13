@@ -1,4 +1,5 @@
 import Brands from "./Brands";
+import CardContent from "./CardContent";
 import HeroBanner from "./HeroBanner";
 
 interface SectionComponents {
@@ -10,7 +11,7 @@ interface SectionComponents {
 export const SECTION_COMPONENTS: SectionComponents = {
   "hero-video": HeroBanner,
   "brands": Brands,
-  // "card-content-grid": Header,
+  "card-content-grid": CardContent,
   // "modules": Header,
   // "centered-cta": Header
 };
