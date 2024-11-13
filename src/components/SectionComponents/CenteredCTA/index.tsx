@@ -7,7 +7,6 @@ import Button from "@/components/Button";
 
 
 export default function CenteredCTA(sectionData: sectionCTAContent) {
-  console.log('sectionData', sectionData);
 
   return <section className={styles.CTAWrapper}>
     <h2>{sectionData.title}</h2>
