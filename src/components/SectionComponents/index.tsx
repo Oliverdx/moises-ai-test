@@ -1,5 +1,6 @@
 import Brands from "./Brands";
 import CardContent from "./CardContent";
+import CenteredCTA from "./CenteredCTA";
 import HeroBanner from "./HeroBanner";
 import Modules from "./Modules";
 
@@ -14,5 +15,5 @@ export const SECTION_COMPONENTS: SectionComponents = {
   "brands": Brands,
   "card-content-grid": CardContent,
   "modules": Modules,
-  // "centered-cta": Header
+  "centered-cta": CenteredCTA
 };

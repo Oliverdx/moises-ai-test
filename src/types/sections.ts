@@ -30,3 +30,7 @@ export interface sectionCardContent extends sectionBase{
 export interface sectionModuleContent extends sectionBase{
   cards: Array<module>
 }
+
+export interface sectionCTAContent extends sectionBase{
+  buttons: Array<button>
+}
