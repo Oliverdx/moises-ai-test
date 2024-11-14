@@ -14,7 +14,7 @@ export default async function Home() {
   return (
     <>
       {content[0]?.contentSections?.map((section: sectionBase) => {
-        const SectionComponent = SECTION_COMPONENTS[section?.__component.replace('sections.', '')];
+        const SectionComponent = SECTION_COMPONENTS[section?.__component?.replace('sections.', '')];
 
         if (!SectionComponent)
           return null;
