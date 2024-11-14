@@ -1,9 +1,9 @@
-import SectionDescription from "@/components/SectionDescription";
+import SectionDescription from "@components/SectionDescription";
 
-import { sectionCTAContent } from "@/types/sections";
+import { sectionCTAContent } from "@types/sections";
 
 import styles from "./style.module.scss"
-import Button from "@/components/Button";
+import Button from "@components/Button";
 
 
 export default function CenteredCTA(sectionData: sectionCTAContent) {

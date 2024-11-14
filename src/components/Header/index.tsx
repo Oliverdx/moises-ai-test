@@ -2,10 +2,10 @@
 import { useState } from "react";
 
 
-import { link } from "@/types/global";
+import { link } from "@types/global";
 
 import styles from "./style.module.scss";
-import { Logo } from "@/icons/Logo";
+import { Logo } from "@icons/Logo";
 import Link from "next/link";
 
 const Header = ({ links }: { links: Array<link> }) => {

@@ -1,11 +1,11 @@
-import Header from "@/components/Header";
-import { fetchData } from "@/utils/fetchData";
+import Header from "@components/Header";
+import { fetchData } from "@utils/fetchData";
 import type { Metadata } from "next";
 
-import "@/styles/globals.scss";
-import Footer from "@/components/Footer";
-import { globalData } from "@/types/global";
-import LdJsonScript from "@/components/LdJsonScript";
+import "@styles/globals.scss";
+import Footer from "@components/Footer";
+import { globalData } from "@types/global";
+import LdJsonScript from "@components/LdJsonScript";
 
 export const metadata: Metadata = {
   title: "Moises AI",

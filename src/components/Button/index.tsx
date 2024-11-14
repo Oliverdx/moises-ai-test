@@ -5,8 +5,8 @@ import { useRouter } from "next/navigation";
 import styles from "./style.module.scss"
 
 
-import { ArrowRight } from "@/icons/ArrowRight";
-import { button } from "@/types/generic";
+import { ArrowRight } from "@icons/ArrowRight";
+import { button } from "@types/generic";
 
 export default function Button(buttonProps: button){
   

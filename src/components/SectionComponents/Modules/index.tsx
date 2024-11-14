@@ -2,13 +2,13 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 
-import SectionDescription from "@/components/SectionDescription";
-import Module from "@/components/Module";
+import SectionDescription from "@components/SectionDescription";
+import Module from "@components/Module";
 
-import { SlideArrowRight } from '@/icons/SlideArrowRight';
-import { SlideArrowLeft } from '@/icons/SlideArrowLeft';
+import { SlideArrowRight } from '@icons/SlideArrowRight';
+import { SlideArrowLeft } from '@icons/SlideArrowLeft';
 
-import { sectionCardContent } from "@/types/sections";
+import { sectionCardContent } from "@types/sections";
 
 // Import Swiper styles
 import 'swiper/css';
