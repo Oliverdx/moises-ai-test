@@ -50,11 +50,11 @@ export default function Modules(sectionData: sectionCardContent) {
             {sectionData.description}
           </SectionDescription>
         </div>
-        <div className={styles.modulesWrapper_controller} data-component-name="swiper-nav">
+        <div className={styles.modulesWrapper_controller} data-component-name="swiper-nav" role="presentation">
           <button className='swiper-button-prev'>
             <SlideArrowLeft />
           </button>
-          <button className='swiper-button-next'>
+          <button className='swiper-button-next' role="presentation">
             <SlideArrowRight />
           </button>
         </div>

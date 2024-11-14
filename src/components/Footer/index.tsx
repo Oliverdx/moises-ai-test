@@ -32,14 +32,14 @@ export default function Footer({
           <Logo />
           <p>{helpText}</p>
 
-          <select className={styles.footerTop_languageSelector}>
+          <select className={styles.footerTop_languageSelector} aria-label="Select a language">
             <option value="en">English</option>
             <option value="pt">Português</option>
           </select>
 
           <div className={styles.footerTop_social}>
             {Object.keys(social)?.map(socialName =>
-              <a href={social[socialName]} key={socialName} target="_blank">
+              <a href={social[socialName]} title={socialIconsMap[socialName]} key={socialName} target="_blank">
                 {socialIconsMap[socialName]}
               </a>
             )}
@@ -48,7 +48,7 @@ export default function Footer({
         <nav className={styles.footerTop_leftSide}>
           {footerMenu.map(menu =>
             <div key={menu.id}>
-              <h4>{menu.title}</h4>
+              <h3>{menu.title}</h3>
               <ul>
                 {menu.dropdown.map(subItem =>
                   <li key={`${subItem.id}-${subItem.title}`}>

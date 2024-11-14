@@ -30,7 +30,7 @@ const Header = ({ links }: { links: Array<link> }) => {
   return <header className={styles.header}>
     <div className={styles.headerWrapper}>
       <div className={styles.logoWrapper}>
-        <a href="/">
+        <a href="/" title="Homepage">
           <Logo />
         </a>
       </div>
@@ -40,7 +40,7 @@ const Header = ({ links }: { links: Array<link> }) => {
       </div>
 
       <div className={`${styles.menu} ${mobileOpen ? styles.menuOpen : ""}`}>
-        <nav className={styles.menuWrapper}>
+        <nav className={styles.menuWrapper} aria-label="Main menu">
           <ul>
             {links?.map(link => {
               if (link.title.toLowerCase() !== "login")
