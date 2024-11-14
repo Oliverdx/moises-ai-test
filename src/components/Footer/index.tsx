@@ -4,7 +4,7 @@ import styles from "./style.module.scss";
 
 
 import { Dot } from "@/icons/Dot";
-import { Logo } from "@/icons/Logo";
+import { WebsiteLogo } from "@/icons/WebsiteLogo"
 import { Facebook } from "@/icons/Facebook";
 import { Instagram } from "@/icons/Instagram";
 import { Twitter } from "@/icons/Twitter";
@@ -32,7 +32,7 @@ export default function Footer({
     <section className={styles.footerContainer}>
       <section className={styles.footerTop}>
         <div className={styles.footerTop_rightSide}>
-          <Logo />
+          <WebsiteLogo />
           <p>{helpText}</p>
 
           <select

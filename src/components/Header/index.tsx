@@ -5,7 +5,7 @@ import { useState } from "react";
 import { link } from "@/types/global";
 
 import styles from "./style.module.scss";
-import { Logo } from "@/icons/logo";
+import { WebsiteLogo } from "@/icons/WebsiteLogo";
 import Link from "next/link";
 
 const Header = ({ links }: { links: Array<link> }) => {
@@ -33,7 +33,7 @@ const Header = ({ links }: { links: Array<link> }) => {
     <div className={styles.headerWrapper}>
       <div className={styles.logoWrapper}>
         <Link href="/" title="Homepage">
-          <Logo />
+          <WebsiteLogo />
         </Link>
       </div>
 
