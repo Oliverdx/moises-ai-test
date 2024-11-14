@@ -1,9 +1,9 @@
-import { sectionCardContent } from "@types/sections";
+import { sectionCardContent } from "@/types/sections";
 
-import SectionDescription from "@components/SectionDescription";
-import Card from "@components/Card";
+import SectionDescription from "@/components/SectionDescription";
+import Card from "@/components/Card";
 
-import { card } from "@types/generic";
+import { card } from "@/types/generic";
 
 import styles from "./style.module.scss"
 

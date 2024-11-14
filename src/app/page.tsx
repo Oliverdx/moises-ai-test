@@ -1,6 +1,6 @@
-import SECTION_COMPONENTS from "@components/SectionComponents";
-import { sectionBase } from "@types/sections";
-import { fetchData } from "@utils/fetchData";
+import SECTION_COMPONENTS from "@/components/SectionComponents";
+import { sectionBase } from "@/types/sections";
+import { fetchData } from "@/utils/fetchData";
 import { Suspense} from "react";
 
 

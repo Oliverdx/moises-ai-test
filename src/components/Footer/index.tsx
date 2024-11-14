@@ -1,16 +1,16 @@
-import { footerProps, SocialType } from "../../types/global";
+import { footerProps, SocialType } from "@/types/global";
 
 import styles from "./style.module.scss";
 
 
-import { Dot } from "../../icons/Dot.tsx";
-import { Logo } from "../../icons/Logo.tsx";
-import { Facebook } from "../../icons/Facebook.tsx";
-import { Instagram } from "../../icons/Instagram.tsx";
-import { Twitter } from "../../icons/Twitter.tsx";
-import { Youtube } from "../../icons/Youtube.tsx";
-import { TikTok } from "../../icons/TikTok.tsx";
-import { Linkedin } from "../../icons/Linkedin.tsx";
+import { Dot } from "@/icons/Dot";
+import { Logo } from "@/icons/Logo";
+import { Facebook } from "@/icons/Facebook";
+import { Instagram } from "@/icons/Instagram";
+import { Twitter } from "@/icons/Twitter";
+import { Youtube } from "@/icons/Youtube";
+import { TikTok } from "@/icons/TikTok";
+import { Linkedin } from "@/icons/Linkedin";
 
 export default function Footer({
   copyright,

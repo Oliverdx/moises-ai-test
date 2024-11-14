@@ -2,7 +2,7 @@
 
 import Slider from 'react-infinite-logo-slider'
 
-import { sectionBrands } from "@types/sections";
+import { sectionBrands } from "@/types/sections";
 
 import styles from "./style.module.scss";
 import Image from 'next/image';

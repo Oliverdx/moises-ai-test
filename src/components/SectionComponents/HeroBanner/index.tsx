@@ -1,15 +1,15 @@
 "use client"
 
-import Button from "@components/Button";
+import Button from "@/components/Button";
 
 import styles from "./style.module.scss";
 
-import { sectionHeroVideo } from "@types/sections";
-import { button } from "@types/generic";
+import { sectionHeroVideo } from "@/types/sections";
+import { button } from "@/types/generic";
 
-import { PlayButton } from "@icons/Playbutton";
-import { SoundWaves } from "@icons/Soundwaves";
-import SectionDescription from "@components/SectionDescription";
+import { PlayButton } from "@/icons/Playbutton";
+import { SoundWaves } from "@/icons/Soundwaves";
+import SectionDescription from "@/components/SectionDescription";
 import { useRef, useState } from "react";
 
 

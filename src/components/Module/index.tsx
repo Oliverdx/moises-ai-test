@@ -1,9 +1,9 @@
 "use client"
 
-import { module } from "@types/generic";
+import { module } from "@/types/generic";
 
 import styles from "./style.module.scss";
-import { ArrowUp } from "@icons/ArrowUp";
+import { ArrowUp } from "@/icons/ArrowUp";
 
 export default function Module({content} : {content: module}) {
 
