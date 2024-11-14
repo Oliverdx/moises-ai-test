@@ -6,7 +6,7 @@ import styles from "./style.module.scss"
 
 
 import { ArrowRight } from "@/icons/ArrowRight";
-import { button, module } from "@/types/generic";
+import { button } from "@/types/generic";
 
 export default function Button(buttonProps: button){
   

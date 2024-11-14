@@ -1,7 +1,6 @@
 import Header from "@/components/Header";
 import { fetchData } from "@/utils/fetchData";
 import type { Metadata } from "next";
-import Script from "next/script";
 
 import "@/styles/globals.scss";
 import Footer from "@/components/Footer";
