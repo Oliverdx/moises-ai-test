@@ -1,8 +1,6 @@
 import SECTION_COMPONENTS from "@/components/SectionComponents";
 import { sectionBase } from "@/types/sections";
 import { fetchData } from "@/utils/fetchData";
-import { Suspense } from "react";
-
 
 export default async function Home() {
 
@@ -17,12 +15,9 @@ export default async function Home() {
         const SectionComponent = SECTION_COMPONENTS[section?.__component?.replace('sections.', '')];
 
         if (!SectionComponent)
-          return null;
+          return <div key={Math.random()}></div>;
 
-        return <Suspense key={section.id}>
-          <SectionComponent {...section} />
-        </Suspense>
-
+        return <SectionComponent key={section.id} {...section} />
       })}
     </>
   );
