@@ -10,10 +10,12 @@ interface SectionComponents {
 }
 
 
-export const SECTION_COMPONENTS: SectionComponents = {
+const SECTION_COMPONENTS: SectionComponents = {
   "hero-video": HeroBanner,
   "brands": Brands,
   "card-content-grid": CardContent,
   "modules": Modules,
   "centered-cta": CenteredCTA
 };
+
+export default SECTION_COMPONENTS;

@@ -1,6 +1,8 @@
-import { SECTION_COMPONENTS } from "@/components/SectionComponents";
+import SECTION_COMPONENTS from "@/components/SectionComponents";
 import { sectionBase } from "@/types/sections";
 import { fetchData } from "@/utils/fetchData";
+import { Suspense} from "react";
+
 
 export default async function Home() {
 
@@ -15,7 +17,9 @@ export default async function Home() {
         if(!SectionComponent)
           return null;
 
-        return <SectionComponent key={section.id} {...section}/>
+        return <Suspense key={section.id}>
+          <SectionComponent {...section}/>
+        </Suspense>
 
       })}
     </>

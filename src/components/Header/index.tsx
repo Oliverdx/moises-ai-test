@@ -1,10 +1,11 @@
 "use client"
+import { useState } from "react";
+
 
 import { link } from "@/types/global";
 
 import styles from "./style.module.scss";
 import { Logo } from "@/icons/Logo";
-import { useState } from "react";
 
 const Header = ({ links }: { links: Array<link> }) => {
 
