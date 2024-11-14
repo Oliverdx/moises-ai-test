@@ -47,15 +47,29 @@
     }
 
   }
+
+  &_playBtn{
+    transition: ease all 300ms;
+    cursor: pointer;
+
+    &:hover{
+      opacity: 0.5
+    }
+  }
   
   &_text {
+    appearance: none;
+    background: none;
+    border: none;
+    color: #FFF;
     display: flex;
     align-items: center;
-    max-width: 77px;
+    width: 101px;
     height: 52px;
-    padding: 0 0 0 24px;
+    padding: 0 0 0 12px;
     font-size: 14px;
     line-height: 16.8px;
+    cursor: pointer;
 
     // little trick to create the spaced border
     border-left: 1px solid #262626;

@@ -51,9 +51,9 @@ export default function HeroBanner(sectionData: sectionHeroVideo) {
           <div className={styles.soundWave}>
             <SoundWaves className={styles.herovideo_demo_soundwaves} />
           </div>
-          <span className={styles.herovideo_demo_text}>
+          <button className={styles.herovideo_demo_text} onClick={() => alert('Sorry still in development')}>
             Upload your own track
-          </span>
+          </button>
         </div>
       </div>
 
