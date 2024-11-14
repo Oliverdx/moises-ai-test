@@ -22,13 +22,26 @@ export default function Modules(sectionData: sectionCardContent) {
     <Swiper
       className={styles.modulesCards}
       spaceBetween={25}
-      slidesPerView={3}
       modules={[Navigation]}// This is the line I needed to add
       navigation={{
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        }
       }
-      }
+      allowSlideNext
+      breakpoints={{
+        1240: {
+          slidesPerView: 3,
+        },
+        1019: {
+          slidesPerView: 2,
+          spaceBetween: 10
+        },
+        768: {
+          slidesPerView: 1,
+          spaceBetween: 5
+        }
+      }}
     >
       <div className={styles.modulesWrapper}>
         <div className={styles.modulesWrapper_titleContainer}>

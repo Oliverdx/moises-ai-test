@@ -11,6 +11,12 @@
     text-align: center;
     margin: 20px 0 15px;
   }
+
+  @media screen and (max-width: 1240px) {
+    width: 392px;
+    height: auto;
+    margin: 0 auto;
+  }
 }
 
 .preTitle{
@@ -25,4 +31,13 @@
   grid-template-columns: repeat(3, 381px);
   grid-gap: 50px;
   margin: 40px 0 0;
+
+  @media screen and (max-width: 1240px) {
+    grid-template-columns: repeat(2, 381px);
+  }
+
+  @media screen and (max-width: 1019px) {
+    grid-template-columns: inherit;
+    width: 90%;
+  }
 }

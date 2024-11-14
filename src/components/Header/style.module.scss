@@ -1,15 +1,130 @@
 .header{
   width: 100%;
-  height: 50px;
   position: absolute;
+}
 
-  ul{
-    list-style: none;
-    display: grid;
-    grid-template-columns: 33% repeat(4, auto) 33%;
-    
-    :nth-child(6){
-      text-align: center;
+.headerWrapper{
+  display: flex;
+  align-items: center;
+  width: 1240px;
+  max-width: 90%;
+  height: 90px;
+  margin: 0 auto;
+  position: relative;
+
+  @media screen and (max-width: 1240px) {
+    width: 90%;
+  }
+}
+
+.logoWrapper{
+  z-index: 10;
+}
+
+.hamburgerMenu{
+  display: none;
+
+  @media screen and (max-width: 1019px){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    z-index: 10;
+
+    span{
+      display: block;
+      width: 30px;
+      height: 2px;
+      background: #FFF;
+      margin: 10px 0;
+      transition: ease all 300ms;
     }
+
+    &:before{
+      content: "";
+      display: block;
+      width: 30px;
+      height: 2px;
+      background: #FFF;
+      transition: ease all 300ms;
+    }
+
+    &.menuOpen{
+      span{
+        transform: translate(0px, -2px)rotate(-45deg)
+      }
+      &:before{
+        transform: translate(0px, 10px)rotate(45deg);
+      }
+    }
+
+  }
+}
+
+.menu{
+  display: flex;
+  align-items: center;
+  width: 66%;
+
+  @media screen and (max-width: 1019px){
+    display: none;
+    background: #000;
+    z-index: 9;
+
+    &.menuOpen{
+      display: block;
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      box-sizing: border-box;
+      top: 0;
+      left: 0;
+      padding: 100px 0 0;
+    }
+  }
+}
+
+.logoWrapper{
+  width: 33%
+}
+
+.menuWrapper{
+  ul{
+    display: flex;
+    justify-content:space-between;
+    width: 480px;
+
+    @media screen and (max-width: 1019px){
+      flex-direction: column;
+      padding-top: 10px;
+      width: 90%;
+      margin: 0 auto;
+
+      a{
+        display: block;
+        width: 100%;
+        height: 41px;
+        margin: 0 0 8px;
+      }
+    }
+  }
+}
+
+.loginWrapper{
+  width: 100%;
+  text-align: right;
+  
+  
+  @media screen and (max-width: 1019px){
+    position: absolute;
+    width: 90%;
+    text-align: left;
+    top: calc(100vh - 140px);
+    left: 5%;
   }
 }

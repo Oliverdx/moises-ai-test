@@ -5,8 +5,12 @@
   display: block;
   position: absolute;
   top: 0;
-  z-index: 10;
-  background: linear-gradient(90deg, rgb(0, 0, 0) 10%, rgba(255, 255, 255, 0) 80%)
+  z-index: 8;
+  background: linear-gradient(90deg, rgb(0, 0, 0) 10%, rgba(255, 255, 255, 0) 80%);
+
+  @media screen and (max-width: 768px) {
+    width: 100px;
+  }
 }
 
 
@@ -29,5 +33,9 @@
 
   img{
     margin: 0 20px;
+  }
+
+  @media screen and (max-width: 768px) {
+    margin-bottom: 50px;
   }
 }

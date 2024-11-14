@@ -8,11 +8,17 @@
   font-size: 16px;
   margin: 0;
   text-align: left;
+
+  @media screen and (max-width: 768px){
+    font-size: 19px;
+  }
 }
 
 .cardDescription{
   font-size: 14px;
+  line-height: 16.8px;
   color: #858585;
   margin: 0;
   text-align: left;
+
 }
