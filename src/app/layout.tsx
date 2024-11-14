@@ -4,6 +4,9 @@ import type { Metadata } from "next";
 import Script from "next/script";
 
 import "@/styles/globals.scss";
+import Footer from "@/components/Footer";
+import { globalData } from "@/types/global";
+import LdJsonScript from "@/components/LdJsonScript";
 
 export const metadata: Metadata = {
   title: "Moises AI",
@@ -16,7 +19,7 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
 
-  const globalData = await fetchData('global');
+  const globalData: globalData = await fetchData('global');
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -29,16 +32,13 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
-      <Script
-        id="schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(jsonLd),
-        }}
-      />
+      <LdJsonScript id="schema" jsonLd={jsonLd} />
       <body>
-        <Header links={globalData?.menu}/>
+        <Header links={globalData?.menu} />
         <main>{children}</main>
+        <Footer
+          {...globalData}
+        />
       </body>
     </html>
   );
