@@ -1,16 +1,16 @@
-import { footerProps } from "@/types/global";
+import { footerProps, SocialType } from "../../types/global";
 
 import styles from "./style.module.scss";
 
 
-import { Dot } from "@/icons/Dot";
-import { Logo } from "@/icons/Logo";
-import { Facebook } from "@/icons/Facebook";
-import { Instagram } from "@/icons/Instagram";
-import { Twitter } from "@/icons/Twitter";
-import { Youtube } from "@/icons/Youtube";
-import { TikTok } from "@/icons/TikTok";
-import { Linkedin } from "@/icons/Linkedin";
+import { Dot } from "../../icons/Dot";
+import { Logo } from "../../icons/Logo";
+import { Facebook } from "../../icons/Facebook";
+import { Instagram } from "../../icons/Instagram";
+import { Twitter } from "../../icons/Twitter";
+import { Youtube } from "../../icons/Youtube";
+import { TikTok } from "../../icons/TikTok";
+import { Linkedin } from "../../icons/Linkedin";
 
 export default function Footer({
   copyright,
@@ -44,11 +44,15 @@ export default function Footer({
           </select>
 
           <div className={styles.footerTop_social}>
-            {Object.keys(social)?.map(socialName =>
-              <a href={social[socialName]} title={socialIconsMap[socialName]} key={socialName} target="_blank">
-                {socialIconsMap[socialName]}
+            {Object.keys(social).map((socialName) => (
+              <a
+                href={social[socialName as keyof SocialType]}
+                key={socialName}
+                target="_blank"
+              >
+                {socialIconsMap[socialName as keyof SocialType]}
               </a>
-            )}
+            ))}
           </div>
         </div>
         <nav className={styles.footerTop_leftSide}>
