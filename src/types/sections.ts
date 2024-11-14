@@ -12,7 +12,12 @@ export interface sectionBase {
 
 export interface sectionHeroVideo extends sectionBase {
   buttons: Array<button>
-  demo: unknown,
+  demo: {
+    id: number,
+    title: string,
+    url: string,
+    format: string
+  },
   background: {
     url: string,
     height: string
