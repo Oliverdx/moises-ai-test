@@ -6,6 +6,7 @@ import { link } from "@/types/global";
 
 import styles from "./style.module.scss";
 import { Logo } from "@/icons/Logo";
+import Link from "next/link";
 
 const Header = ({ links }: { links: Array<link> }) => {
 
@@ -31,9 +32,9 @@ const Header = ({ links }: { links: Array<link> }) => {
   return <header className={styles.header}>
     <div className={styles.headerWrapper}>
       <div className={styles.logoWrapper}>
-        <a href="/" title="Homepage">
+        <Link href="/" title="Homepage">
           <Logo />
-        </a>
+        </Link>
       </div>
 
       <div className={`${styles.hamburgerMenu} ${mobileOpen ? styles.menuOpen : ""}`} onClick={() => toggleMenu()}>
