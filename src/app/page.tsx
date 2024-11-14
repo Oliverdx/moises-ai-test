@@ -9,7 +9,7 @@ export default async function Home() {
   const content = await fetchData('pages');
 
   if (!content)
-    return null;
+    return <></>;
 
   return (
     <>
