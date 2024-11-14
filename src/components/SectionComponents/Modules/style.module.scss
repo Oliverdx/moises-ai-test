@@ -1,6 +1,14 @@
 @mixin modulesContainer{
   width: 1240px;
   margin: 0 auto;
+
+  @media screen and (max-width: 1240px) {
+    width: 100%;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 382px;
+  }
 }
 
 .modulesSection{
@@ -23,10 +31,23 @@
   span{
     display: block;
     width: 585px;
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
   }
 
   &_titleContainer{
     width: 1134px;
+
+    @media screen and (max-width: 1240px) {
+      width: 80%;
+    }
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
+
   }
 
   &_controller{
@@ -51,6 +72,11 @@
         background-color: #636363;
       }
     }
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+
   }
 
 }
@@ -59,9 +85,16 @@
   @include modulesContainer;
   display: flex;
   flex-direction: column-reverse;
-  // display: grid;
-  // grid-template-columns: repeat(3, 397px);
-  // justify-content: space-between;
-  // height: 170px;
-  // overflow: hidden;
+
+  @media screen and (max-width: 1240px) {
+    width: 850px;
+  }
+
+  @media screen and (max-width: 1019px) {
+    width: 700px;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 382px;
+  }
 }

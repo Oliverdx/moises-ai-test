@@ -18,4 +18,19 @@
   span{
     margin:0px 0 40px;
   }
+
+  @media screen and (max-width: 768px) {
+    background-color: transparent;
+
+    h2{
+      font-size: 36px;
+      width: 382px;
+    }
+
+    span{
+      width: 382px;
+      text-align: center;
+      margin: 0 auto 40px;
+    }
+  }
 }
