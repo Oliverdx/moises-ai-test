@@ -23,7 +23,7 @@ export default async function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": globalData.siteName,
+    "name": globalData?.siteName,
     "url": "https://moisesai.com",
     "logo": "https://moisesai.com/images/logo.png",
     "sameAs": Object.values(globalData?.social).map(link => link)
