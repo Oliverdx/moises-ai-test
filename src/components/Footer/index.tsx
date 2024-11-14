@@ -1,5 +1,8 @@
 import { footerProps } from "@/types/global";
+
 import styles from "./style.module.scss";
+
+
 import { Dot } from "@/icons/Dot";
 import { Logo } from "@/icons/Logo";
 import { Facebook } from "@/icons/Facebook";
@@ -32,7 +35,10 @@ export default function Footer({
           <Logo />
           <p>{helpText}</p>
 
-          <select className={styles.footerTop_languageSelector} aria-label="Select a language">
+          <select
+            className={styles.footerTop_languageSelector}
+            aria-label="Select a language"
+          >
             <option value="en">English</option>
             <option value="pt">Português</option>
           </select>
