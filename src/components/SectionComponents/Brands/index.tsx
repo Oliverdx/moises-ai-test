@@ -2,7 +2,7 @@
 
 import Slider from 'react-infinite-logo-slider'
 
-import { sectionBrands } from "@/types/sections";
+import { sectionBrands } from "@types/sections";
 
 import styles from "./style.module.scss";
 import Image from 'next/image';
@@ -19,7 +19,7 @@ export default function Brands(sectionData: sectionBrands) {
       blurBorders={false} // Isn't working properly, making the blur with vanilla CSS
     >
       {brands.map(brand => <Slider.Slide key={brand.id}>
-        <Image alt={brand.title} src={brand.url} height={40} />
+        <Image alt={brand.title} src={brand.url} width={128} height={40} />
       </Slider.Slide>)}
     </Slider>
   </section>
