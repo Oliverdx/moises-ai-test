@@ -23,7 +23,7 @@ export default function Card({content} : {content: card}) {
   }
 
   return <div className={styles.cardWrapper}>
-    {CardIconMap[content.icon]}
+    {CardIconMap[content?.icon || "" ]}
     <h3 className={styles.cardTitle}>
       {content.title}
     </h3>
