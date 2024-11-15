@@ -16,7 +16,7 @@
 
 .solid{
   @include buttonBase;
-  width: 132px;
+  min-width: 132px;
   background-color: #1040FF;
 
   &:hover{

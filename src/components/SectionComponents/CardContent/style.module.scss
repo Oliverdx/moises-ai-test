@@ -6,16 +6,19 @@
   text-align: center;
   height: 571px;
 
-
   h2{
     text-align: center;
     margin: 20px 0 15px;
   }
 
   @media screen and (max-width: 1240px) {
-    width: 392px;
     height: auto;
     margin: 0 auto;
+
+    span{
+      max-width: 90%;
+      margin: 0 auto;
+    }
   }
 }
 

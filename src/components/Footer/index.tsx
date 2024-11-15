@@ -1,7 +1,8 @@
+"use client"
+
 import { footerProps, SocialType } from "@/types/global";
 
 import styles from "./style.module.scss";
-
 
 import { Dot } from "@/icons/Dot";
 import { WebsiteLogo } from "@/icons/WebsiteLogo"
@@ -11,6 +12,7 @@ import { Twitter } from "@/icons/Twitter";
 import { Youtube } from "@/icons/Youtube";
 import { TikTok } from "@/icons/TikTok";
 import { Linkedin } from "@/icons/Linkedin";
+import { useRouter, usePathname } from "next/navigation";
 
 export default function Footer({
   copyright,
@@ -19,6 +21,9 @@ export default function Footer({
   social
 }: footerProps) {
 
+  const router = useRouter();
+  const pathName = usePathname();
+
   const socialIconsMap = {
     "facebook": <Facebook />,
     "instagram": <Instagram />,
@@ -26,6 +31,10 @@ export default function Footer({
     "youTube": <Youtube />,
     "tikTok": <TikTok />,
     "linkedIn": <Linkedin />
+  }
+
+  const handleLocale = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    router.replace(`/${event.target.value}`);
   }
 
   return <footer className={styles.footerWrapper}>
@@ -38,6 +47,8 @@ export default function Footer({
           <select
             className={styles.footerTop_languageSelector}
             aria-label="Select a language"
+            onChange={handleLocale}
+            value={pathName.replace('/', '')}
           >
             <option value="en">English</option>
             <option value="pt">Português</option>

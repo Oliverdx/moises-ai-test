@@ -4,12 +4,11 @@ import { useRouter } from "next/navigation";
 
 import styles from "./style.module.scss"
 
-
 import { ArrowRight } from "@/icons/ArrowRight";
 import { button } from "@/types/generic";
 
-export default function Button(buttonProps: button){
-  
+export default function Button(buttonProps: button) {
+
   const router = useRouter();
 
   const {
@@ -26,9 +25,9 @@ export default function Button(buttonProps: button){
   const buttonAction = (event: { preventDefault: () => void; }) => {
     event.preventDefault();
 
-    // Add SEO tracks here
+    // SEO tracks here (Adobe, GTM....)
 
-    if(url.indexOf('http') > 0)
+    if (url.indexOf('http') > 0)
       return router.push(url)
 
     return router.replace(url)
