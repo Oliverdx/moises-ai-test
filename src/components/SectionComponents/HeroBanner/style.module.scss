@@ -16,6 +16,10 @@
   font-weight: 300;
   max-width: 607px;
   margin: 0 0 20px;
+
+  &.translated{
+    font-size: 48px;
+  }
 }
 
 .herovideo_demo {
@@ -104,8 +108,12 @@
 .herovideo_ctaBtns{
   display: flex;
   justify-content: space-between;
-  width: 326px;
+  min-width: 326px;
   margin-top: 40px;
+
+  a{
+    margin: 0 10px;
+  }
 
   @media screen and (max-width: 768px) {
     width: 100%;

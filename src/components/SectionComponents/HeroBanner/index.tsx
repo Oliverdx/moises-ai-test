@@ -11,6 +11,7 @@ import { PlayButton } from "@/icons/Playbutton";
 import { SoundWaves } from "@/icons/Soundwaves";
 import SectionDescription from "@/components/SectionDescription";
 import { useRef, useState } from "react";
+import { useLanguage } from "@/context/LanguageContext";
 
 
 export default function HeroBanner(sectionData: sectionHeroVideo) {
@@ -18,6 +19,7 @@ export default function HeroBanner(sectionData: sectionHeroVideo) {
   const { __component, background, title, description, buttons } = sectionData;
 
   const [isPlaying, setIsPlaying] = useState(false);
+  const { language } = useLanguage();
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   const togglePlayPause = () => {
@@ -40,11 +42,13 @@ export default function HeroBanner(sectionData: sectionHeroVideo) {
     }}
   >
     <div className={styles.bannerContainer}>
-      <h1 className={styles.herovideo_title}>{title}</h1>
+      <h1 className={`${styles.herovideo_title} ${language === "pt" ? styles.translated : ""}`}>{title}</h1>
       <SectionDescription>{description}</SectionDescription>
 
       <div className={styles.herovideo_demo}>
-        <span className={styles.herovideo_demo_smallDesc}>Try Now</span>
+        <span className={styles.herovideo_demo_smallDesc}>
+          {language === "en" ? "Try Now" : "Experimente Agora"}
+        </span>
         <div className={styles.herovideo_demo_audioWrapper}>
           <PlayButton className={styles.herovideo_demo_playBtn} onClick={togglePlayPause} />
           <audio ref={audioRef} src={sectionData?.demo?.url} />
@@ -52,7 +56,7 @@ export default function HeroBanner(sectionData: sectionHeroVideo) {
             <SoundWaves className={styles.herovideo_demo_soundwaves} />
           </div>
           <button className={styles.herovideo_demo_text} onClick={() => alert('Sorry still in development')}>
-            Upload your own track
+            {language === "en" ? "Upload your own track" : "Adicione sua própria trilha"}
           </button>
         </div>
       </div>
