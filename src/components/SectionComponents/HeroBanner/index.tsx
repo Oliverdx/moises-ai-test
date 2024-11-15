@@ -1,6 +1,10 @@
 "use client"
 
+import { useRef, useState } from "react";
+import { usePathname } from "next/navigation";
+
 import Button from "@/components/Button";
+import SectionDescription from "@/components/SectionDescription";
 
 import styles from "./style.module.scss";
 
@@ -9,18 +13,16 @@ import { button } from "@/types/generic";
 
 import { PlayButton } from "@/icons/Playbutton";
 import { SoundWaves } from "@/icons/Soundwaves";
-import SectionDescription from "@/components/SectionDescription";
-import { useRef, useState } from "react";
-import { useLanguage } from "@/context/LanguageContext";
-
 
 export default function HeroBanner(sectionData: sectionHeroVideo) {
 
   const { __component, background, title, description, buttons } = sectionData;
 
   const [isPlaying, setIsPlaying] = useState(false);
-  const { language } = useLanguage();
   const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  const pathname = usePathname();
+  const language = pathname.replace('/', '');
 
   const togglePlayPause = () => {
 
@@ -47,7 +49,7 @@ export default function HeroBanner(sectionData: sectionHeroVideo) {
 
       <div className={styles.herovideo_demo}>
         <span className={styles.herovideo_demo_smallDesc}>
-          {language === "en" ? "Try Now" : "Experimente Agora"}
+          {language === "pt" ? "Try Now" : "Experimente Agora"}
         </span>
         <div className={styles.herovideo_demo_audioWrapper}>
           <PlayButton className={styles.herovideo_demo_playBtn} onClick={togglePlayPause} />
@@ -56,7 +58,7 @@ export default function HeroBanner(sectionData: sectionHeroVideo) {
             <SoundWaves className={styles.herovideo_demo_soundwaves} />
           </div>
           <button className={styles.herovideo_demo_text} onClick={() => alert('Sorry still in development')}>
-            {language === "en" ? "Upload your own track" : "Adicione sua própria trilha"}
+            {language === "pt" ? "Upload your own track" : "Adicione sua própria trilha"}
           </button>
         </div>
       </div>
