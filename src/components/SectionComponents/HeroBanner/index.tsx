@@ -49,7 +49,7 @@ export default function HeroBanner(sectionData: sectionHeroVideo) {
 
       <div className={styles.herovideo_demo}>
         <span className={styles.herovideo_demo_smallDesc}>
-          {language === "pt" ? "Try Now" : "Experimente Agora"}
+          {language === "en" ? "Try Now" : "Experimente Agora"}
         </span>
         <div className={styles.herovideo_demo_audioWrapper}>
           <PlayButton className={styles.herovideo_demo_playBtn} onClick={togglePlayPause} />
@@ -58,7 +58,7 @@ export default function HeroBanner(sectionData: sectionHeroVideo) {
             <SoundWaves className={styles.herovideo_demo_soundwaves} />
           </div>
           <button className={styles.herovideo_demo_text} onClick={() => alert('Sorry still in development')}>
-            {language === "pt" ? "Upload your own track" : "Adicione sua própria trilha"}
+            {language === "en" ? "Upload your own track" : "Adicione sua própria trilha"}
           </button>
         </div>
       </div>
